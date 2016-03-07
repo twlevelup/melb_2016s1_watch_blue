@@ -1,6 +1,6 @@
 # LevelUp Watch Edition App Development Environment
 
-[![Build Status](https://snap-ci.com/twlevelup/watch_edition/branch/master/build_image)](https://snap-ci.com/twlevelup/watch_edition/branch/master)
+[![Build Status](https://snap-ci.com/twlevelup/melb_2016s1_watch_blue/branch/master/build_image)](https://snap-ci.com/twlevelup/melb_2016s1_watch_blue/branch/master)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
 
@@ -23,7 +23,8 @@ See the [Installation Instructions](INSTALL.md)
 
 To view the build status and get notifications about the build status:
 
-1. Visit [Snap CI](https://snap-ci.com/twlevelup/watch_edition/branch/master?notice=watch_edition) and click "CCTray" in the top right of the screen
+
+1. Visit [Snap CI](https://snap-ci.com/twlevelup/melb_2016s1_watch_blue/branch/master/notifications/cc_tray) and click "CCTray" in the top right of the screen
 2. Add the XML config to CCTray or CCMenu on your dev machine
 
 You can also access the CI server and view the status of the build here [Snap CI](https://snap-ci.com/twlevelup/watch_edition/branch/master?notice=watch_edition)
