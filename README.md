@@ -62,7 +62,7 @@ These are used to automate various tasks in your development environment and dep
 
 ### Viewing the Latest Build
 
-A semi-latest build will be available at [http://www.bom.gov.au/rss/?ref=ftr](http://www.bom.gov.au/rss/?ref=ftr)
+A semi-latest build will be available at [https://gentle-everglades-37500.herokuapp.com](https://gentle-everglades-37500.herokuapp.com)
 
 ## Watch Specifications
 
