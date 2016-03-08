@@ -60,6 +60,10 @@ These are used to automate various tasks in your development environment and dep
 - [Snap](https://snap-ci.com/) - Continuous Integration
 - [Heroku](https://www.heroku.com/) - Staging environment
 
+### Viewing the Latest Build
+
+A semi-latest build will be available at [http://www.bom.gov.au/rss/?ref=ftr](http://www.bom.gov.au/rss/?ref=ftr)
+
 ## Watch Specifications
 
 The Proto Watch is designed to be a simple low cost device.
