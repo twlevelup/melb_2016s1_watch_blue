@@ -26,7 +26,7 @@ Now that you have Git and NodeJS installed you are ready to download this Git re
 
 ```shell
 cd path_to_team_repo
-npm install -g node-sass grunt-cli jscs yo requirejs phantom-js
+npm install -g node-sass grunt-cli jscs yo requirejs phantomjs
 npm install
 grunt
 ```
