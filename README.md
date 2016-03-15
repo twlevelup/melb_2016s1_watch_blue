@@ -62,7 +62,7 @@ These are used to automate various tasks in your development environment and dep
 
 ### Viewing the Latest Build
 
-A semi-latest build will be available at [https://gentle-everglades-37500.herokuapp.com](https://gentle-everglades-37500.herokuapp.com)
+The latest build is available on [Heroku](http://techable-blue.herokuapp.com/)
 
 ## Watch Specifications
 
@@ -97,6 +97,13 @@ The exact path to the coverage report may vary but will look something like this
 **I've got more questions**
 
 Look at the further reading section below ;-)
+
+**How do I add a new notification type?**
+
+* Create a template for your notification in client/src/templates/views/.hbs
+* Style your notification in client/src/styles/notification.scss
+* Create your view in client/src/js/views/.js
+* Add your notification type to client/src/js/watch-notifications/index.js
 
 ## Further Reading
 
