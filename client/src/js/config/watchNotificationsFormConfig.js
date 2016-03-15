@@ -14,6 +14,10 @@ var notificationsConfig = [
     {
       label: 'No default message!',
       notificationType: 'dummyNotification'
+    },
+    {
+      label: 'Show Flood',
+      notificationType: 'floodNotification'
     }
 ];
 
