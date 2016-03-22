@@ -14,7 +14,7 @@ var WatchNotification = ViewWithButtons.extend({
   template: require('../../templates/views/flood.hbs'),
 
   buttonEvents: {
-    right: 'hide',
+    right: 'showDetails',
     left: 'hide',
     top: 'hide',
     bottom: 'hide',
@@ -34,6 +34,10 @@ var WatchNotification = ViewWithButtons.extend({
 
   hide: function() {
     eventHub.trigger('hideNotification');
+  },
+
+  showDetails: function() {
+      window.App.navigate('alertDetails');
   }
 
 });
