@@ -26,16 +26,20 @@ var AlertsView = PageView.extend({
     left: 'goToHomePage'
   },
 
+  updateData: function(data, thisHandle) {
+    thisHandle
+    thisHandle.render();
+
+    thisHandle.alertDefinition = data;
+  },
+
   initialize: function() {
     var thisHandle = this;
-    var feed_data = $.getJSON( "/images/feed.json", {}, function(data) {
-      thisHandle.alertDefinition = data["weather"][0];
-      thisHandle.render();
+    $.getJSON( "/images/feed.json", {}, function(data) {
+      thisHandle.updateData(data["weather"][0], thisHandle)
 
     } );
-    console.log(feed_data.responseText);
 
-    console.log("initialize");
     this.render();
   },
 

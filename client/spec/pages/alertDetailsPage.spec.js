@@ -14,8 +14,12 @@ describe('The Alert Details Page', function() {
       expect(alertPage.alertDefinition).toBeDefined();
     });
 
-    it('should have a title within the alert', function() {
-      expect(alertPage.alertDefinition.title).toBeDefined();
+    it('should have a type within the alert', function() {
+      expect(alertPage.alertDefinition.type).toBeDefined();
+    });
+
+    it('should have a location within the alert', function() {
+      expect(alertPage.alertDefinition.location).toBeDefined();
     });
   });
 
