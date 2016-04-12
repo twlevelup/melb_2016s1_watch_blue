@@ -2,26 +2,25 @@
   background-color: black;
   color: white;
   position: absolute;
-  height: 160px;
-  width: 160px;
+  height: 180px;
+  width: 180px;
   top: 20px;
   left: 30px;
   opacity: 0.9;
   z-index: 100;
-  padding: 20px;
+  padding: 10px;
 }
 
 .floodNotification {
   background-color: #6699CC;
   color: white;
   position: absolute;
-  height: 160px;
   width: 160px;
   top: 20px;
   left: 30px;
-  opacity: 0.9;
+  font-size: 19px;
   z-index: 100;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .notification-message-display {
