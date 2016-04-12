@@ -27,8 +27,6 @@ var AlertsView = PageView.extend({
   },
 
   initialize: function() {
-    //this.contactsCollection = new ContactsCollection();
-    //this.seedContacts();
     var thisHandle = this;
     var feed_data = $.getJSON( "/images/feed.json", {}, function(data) {
       thisHandle.alertDefinition = data["weather"][0];
@@ -46,25 +44,7 @@ var AlertsView = PageView.extend({
   },
 
   render: function() {
-<<<<<<< c652fcf4cadac6f532885e1ce4da54543dd7c9d7
-||||||| merged common ancestors
-/*
-<h1 class="title">{{title}}</h1>
-<h3 class="location">{{location}}</h3>
-<h3 class="time">{{time}}</h3>
-<h3 class="severity">{{severity}}</h3>
-<p class="warning-description">{{warningDescription}}</p>
-*/
-=======
-/*
-<h1 class="title">{{title}}</h1>
-<h3 class="location">{{location}}</h3>
-<h3 class="time">{{time}}</h3>
-<h3 class="severity">{{severity}}</h3>
-<p class="warning-description">{{warningDescription}}</p>
-*/
     console.log("initialize 2");
->>>>>>> Basic pulling data.json implemented
     this.$el.html(this.template(this.alertDefinition));
 
     var contactsHTML = document.createDocumentFragment();
@@ -76,10 +56,6 @@ var AlertsView = PageView.extend({
     this.$el.find('ul').html(contactsHTML);
 
     return this;
-<<<<<<< c652fcf4cadac6f532885e1ce4da54543dd7c9d7
-  }
-});
-||||||| merged common ancestors
   },
 
   createContactHTML: function(contact) {
@@ -88,25 +64,8 @@ var AlertsView = PageView.extend({
       });
       return view.render().el;
     }
-
-});
-=======
-  },
-
-  createContactHTML: function(contact) {
-      var view = new ContactView({
-        model: contact
-      });
-      return view.render().el;
-    },
-
-  get_data: function(data) {
-
-      this.render();
-  }
 }
 
 );
->>>>>>> Basic pulling data.json implemented
 
 module.exports = new AlertsView();
