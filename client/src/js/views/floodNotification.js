@@ -22,7 +22,7 @@ var WatchNotification = ViewWithButtons.extend({
   },
 
   render: function() {
-
+    console.log(this);
     this.$el.html(this.template({message: this.message}));
 
     // TODO make this configurable

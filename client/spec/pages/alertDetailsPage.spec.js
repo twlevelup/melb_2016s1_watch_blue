@@ -39,17 +39,6 @@ describe('The Alert Details Page', function() {
       alertPage.render();
       expect(alertPage.$el).toBeDefined();
     });
-/*
-    it('should render each of the contacts', function() {
-      spyOn(contactsPage, 'createContactHTML');
-      contactsPage.contactsCollection.reset([{}, {}, {}, {}]);
-      contactsPage.render();
-      expect(contactsPage.createContactHTML.calls.count()).toEqual(4);
-    });
-
-    it('returns the view object', function() {
-      expect(contactsPage.render()).toEqual(contactsPage);
-    });*/
 
   });
 
