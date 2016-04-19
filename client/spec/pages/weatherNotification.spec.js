@@ -45,6 +45,38 @@ describe('The Alert Notification', function() {
       testingNotification.render();
       expect(testingNotification.$el[0].className).toContain('hurricaneNotification');
     });
+
+    it('should have red for a fire', function() {
+      var testingNotification = new weatherNotification({
+          "time": "12:00PM",
+          "date": "22032016",
+          "type": "Fire",
+          "severity": "High",
+          "location": "Townsville",
+          "longtitude":"19.2564S",
+          "latitude":"146.8183E",
+          "description": "Please evacuate immediately"
+      });
+
+      testingNotification.render();
+      expect(testingNotification.$el[0].className).toContain('fireNotification');
+    })
+
+    it('should display the description', function() {
+      var testingNotification = new weatherNotification({
+          "time": "12:00PM",
+          "date": "22032016",
+          "type": "Fire",
+          "severity": "High",
+          "location": "Townsville",
+          "longtitude":"19.2564S",
+          "latitude":"146.8183E",
+          "description": "Please evacuate immediately"
+      });
+
+      testingNotification.render();
+      expect(testingNotification.$el[0].innerText).toContain('Please evacuate immediately');
+    });
   });
 
   describe('button events', function() {

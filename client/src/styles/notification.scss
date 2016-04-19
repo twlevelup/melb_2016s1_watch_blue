@@ -11,8 +11,7 @@
   padding: 10px;
 }
 
-.weatherNotification {
-  background-color: #000000;
+@mixin weatherNotification() {
   color: white;
   position: absolute;
   width: 160px;
@@ -24,14 +23,17 @@
 }
 
 .floodNotification {
+  @include weatherNotification();
   background-color: #6699CC;
 }
 
 .fireNotification {
+  @include weatherNotification();
   background-color: #D49090;
 }
 
 .heatNotification {
+  @include weatherNotification();
   background-color: #FFFB00;
 }
 
