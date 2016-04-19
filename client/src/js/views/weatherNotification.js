@@ -6,7 +6,7 @@ var ViewWithButtons = require('../framework/viewWithButtons'),
 var WeatherNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
-    this.message = opts && opts.message;
+    this.message = opts;
   },
 
   className: 'weatherNotification',
@@ -22,10 +22,16 @@ var WeatherNotification = ViewWithButtons.extend({
   },
 
   render: function() {
+    console.log(this.message.type);
+    switch (this.message.type) {
+      case "Hurricane":
+        this.$el[0].className = 'hurricaneNotification';
+        break;
+      default:
+        break;
+    }
 
-    //if()
-
-    this.$el.html(this.template({message: this.message}));
+    this.$el.html(this.template(this.message));
 
     // TODO make this configurable
     $('#watch-face').append(this.$el);

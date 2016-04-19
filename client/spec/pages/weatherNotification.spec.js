@@ -28,6 +28,25 @@ describe('The Alert Notification', function() {
     weatherNotification.prototype.hide();
   });
 
+  describe('notification colour', function() {
+
+    it('should have blue for floods', function() {
+      var testingNotification = new weatherNotification({
+          "time": "12:00PM",
+          "date": "22032016",
+          "type": "Hurricane",
+          "severity": "High",
+          "location": "Townsville",
+          "longtitude":"19.2564S",
+          "latitude":"146.8183E",
+          "description": "Please evacuate immediately"
+      });
+
+      testingNotification.render();
+      expect(testingNotification.$el[0].className).toContain('hurricaneNotification');
+    });
+  });
+
   describe('button events', function() {
     it('should have button events', function() {
       expect(weatherNotification.prototype.buttonEvents).toBeDefined();
