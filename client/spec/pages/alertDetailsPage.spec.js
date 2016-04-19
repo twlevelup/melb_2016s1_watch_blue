@@ -23,6 +23,33 @@ describe('The Alert Details Page', function() {
     });
   });
 
+  describe('data handling', function () {
+      it ('should update the data correctly', function() {
+          var alertDefinition = {
+                    "time": "abcd",
+                    "date": "",
+                    "type": "",
+                    "severity": "",
+                    "location": "",
+                    "longtitude":"",
+                    "latitude":"",
+                    "description": ""
+                };
+          alertPage.updateData(alertDefinition, alertPage);
+          expect(alertPage.alertDefinition).toEqual(alertDefinition);
+      });
+  });
+
+  describe('navigation', function () {
+      describe('goToHomePage function', function () {
+          it ('should go to the home page successfully', function() {
+              spyOn(window.App, 'navigate');
+              alertPage.goToHomePage();
+              expect(window.App.navigate).toHaveBeenCalledWith('');
+          });
+      });
+  });
+
   describe('button events', function() {
     beforeEach(function() {
       alertPage.setButtonEvents();

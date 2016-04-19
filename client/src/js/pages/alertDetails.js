@@ -27,10 +27,8 @@ var AlertsView = PageView.extend({
   },
 
   updateData: function(data, thisHandle) {
-    thisHandle
-    thisHandle.render();
-
     thisHandle.alertDefinition = data;
+    thisHandle.render();
   },
 
   initialize: function() {
@@ -53,21 +51,10 @@ var AlertsView = PageView.extend({
 
     var contactsHTML = document.createDocumentFragment();
 
-    //this.contactsCollection.each(function(contact) {
-    //  $(contactsHTML).append(this.createContactHTML(contact));
-    //}, this);
-
     this.$el.find('ul').html(contactsHTML);
 
     return this;
-  },
-
-  createContactHTML: function(contact) {
-      var view = new ContactView({
-        model: contact
-      });
-      return view.render().el;
-    }
+  }
 }
 
 );
