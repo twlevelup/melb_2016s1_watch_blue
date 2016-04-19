@@ -15,11 +15,22 @@
   color: white;
   position: absolute;
   width: 160px;
-  top: 20px;
+  top: 10px;
   left: 30px;
   font-size: 19px;
   z-index: 100;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.notification-symbol{
+  padding: 5px;
+}
+
+.notification-direction{
+  background-color: black;
+  text-align: center;
+  padding: 5px;
+  color: white;
 }
 
 .floodNotification {
