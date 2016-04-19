@@ -3,7 +3,7 @@
         {
             "time": "12:00PM",
             "date": "22032016",
-            "type": "Hurricane Alert",
+            "type": "Hurricane",
             "severity": "High",
             "location": "Townsville",
             "longtitude":"19.2564S",
@@ -13,7 +13,7 @@
         {
             "time": "10:50PM",
             "date": "22032016",
-            "type": "Hurricane Warning",
+            "type": "Hurricane",
             "severity": "Medium",
             "location": "Townsville",
             "longtitude":"19.2564S",
@@ -23,17 +23,17 @@
         {
             "time": "09:20PM",
             "date": "22032016",
-            "type": "Fire Alert",
+            "type": "Fire",
             "severity": "High",
             "location": "",
             "longtitude":"",
             "latitude":"",
-            "description": "Please evacuate immediately"        
+            "description": "Please evacuate immediately"
         },
         {
             "time": "09:00PM",
             "date": "22032016",
-            "type": "Fire Warning",
+            "type": "Fire",
             "severity": "Medium",
             "location": "",
             "longtitude":"",
@@ -51,5 +51,5 @@
             "description": "Please evacuate immediately"
         }
     ]
-    
+
 }

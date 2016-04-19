@@ -3,15 +3,15 @@
 var ViewWithButtons = require('../framework/viewWithButtons'),
   eventHub = require('../framework/eventHub');
 
-var WatchNotification = ViewWithButtons.extend({
+var WeatherNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
     this.message = opts && opts.message;
   },
 
-  className: 'floodNotification',
+  className: 'weatherNotification',
 
-  template: require('../../templates/views/flood.hbs'),
+  template: require('../../templates/views/weatherNotification.hbs'),
 
   buttonEvents: {
     right: 'showDetails',
@@ -22,7 +22,9 @@ var WatchNotification = ViewWithButtons.extend({
   },
 
   render: function() {
-    console.log(this);
+
+    //if()
+
     this.$el.html(this.template({message: this.message}));
 
     // TODO make this configurable
@@ -42,4 +44,4 @@ var WatchNotification = ViewWithButtons.extend({
 
 });
 
-module.exports = WatchNotification;
+module.exports = WeatherNotification;

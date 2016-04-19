@@ -16,8 +16,8 @@ var notificationsConfig = [
       notificationType: 'dummyNotification'
     },
     {
-      label: 'Show Flood',
-      notificationType: 'floodNotification'
+      label: 'Show Weather Notification',
+      notificationType: 'weatherNotification'
     }
 ];
 

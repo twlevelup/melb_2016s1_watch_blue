@@ -11,8 +11,8 @@
   padding: 10px;
 }
 
-.floodNotification {
-  background-color: #6699CC;
+.weatherNotification {
+  background-color: #000000;
   color: white;
   position: absolute;
   width: 160px;
@@ -21,6 +21,18 @@
   font-size: 19px;
   z-index: 100;
   padding: 0px 20px 20px 20px;
+}
+
+.floodNotification {
+  background-color: #6699CC;
+}
+
+.fireNotification {
+  background-color: #D49090;
+}
+
+.heatNotification {
+  background-color: #FFFB00;
 }
 
 .notification-message-display {
