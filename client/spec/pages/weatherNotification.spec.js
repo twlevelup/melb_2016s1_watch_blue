@@ -75,7 +75,7 @@ describe('The Alert Notification', function() {
       });
 
       testingNotification.render();
-      expect(testingNotification.$el[0].innerText).toContain('Please evacuate immediately');
+      expect(testingNotification.$el[0].innerText).toContain('Fire');
     });
   });
 
