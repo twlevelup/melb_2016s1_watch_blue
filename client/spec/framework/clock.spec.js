@@ -17,7 +17,7 @@ describe('displaying the date', function() {
 
     it('should display the date', function() {
       clock.displayDateTime(this.now);
-      var expectedOutput = 'Monday February 2 2015';
+      var expectedOutput = 'Mon Feb 2 2015';
       expect($('.clock-date').text()).toEqual(expectedOutput);
     });
 
@@ -27,7 +27,7 @@ describe('displaying the date', function() {
 
     it('should display the date', function() {
       clock.displayDateTime(this.otherTime);
-      var expectedOutput = 'Sunday January 12 2014';
+      var expectedOutput = 'Sun Jan 12 2014';
       expect($('.clock-date').text()).toEqual(expectedOutput);
     });
 
@@ -39,7 +39,7 @@ describe('displaying the time', function() {
   describe('when it\'s 03:04:0s', function() {
     it('should display the time', function() {
       clock.displayDateTime(this.now);
-      var expectedOutput = '03:04:05';
+      var expectedOutput = '03:04AM';
       expect($('.clock-time').text()).toEqual(expectedOutput);
     });
   });
@@ -47,7 +47,7 @@ describe('displaying the time', function() {
   describe('when it\'s 12:11:10s', function() {
     it('should display the time', function() {
       clock.displayDateTime(this.otherTime);
-      var expectedOutput = '12:11:10';
+      var expectedOutput = '12:11AM';
       expect($('.clock-time').text()).toEqual(expectedOutput);
     });
   });
@@ -56,7 +56,7 @@ describe('displaying the time', function() {
 describe('displaying the date and time', function() {
   it('should display the date and time', function() {
     clock.displayDateTime(this.now);
-    var expectedOutput = 'Monday February 2 2015 03:04:05';
+    var expectedOutput = 'Mon Feb 2 2015 03:04AM';
     expect($('.clock-date-time').text()).toEqual(expectedOutput);
   });
 });

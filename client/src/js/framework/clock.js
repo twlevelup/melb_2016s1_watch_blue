@@ -2,7 +2,7 @@
 
 var clock = {};
 
-clock.months = ['January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December'];
+clock.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 clock.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -19,6 +19,10 @@ clock.displayDateTime = function(date) {
       m = date.getMinutes(),
       s = date.getSeconds();
 
+  var amPm = h > 12 ? "PM" : "AM";
+
+  if (amPm == "PM") h = h - 12;
+
   if (h < 10) {
     h = '0' + h;
   }
@@ -31,8 +35,9 @@ clock.displayDateTime = function(date) {
     s = '0' + s;
   }
 
-  var sDate = [clock.days[day], clock.months[month], d, year].join(' '),
-    sTime =  [h, m, s].join(':'),
+  var sDate = [clock.days[day].substring(0, 3), clock.months[month].substring(0, 3), d, year].join(' '),
+    sTime =  [h, m].join(':'),
+    sTime = sTime + amPm,
     sDateTime = sDate + ' ' + sTime;
 
   // TODO scope to current view
