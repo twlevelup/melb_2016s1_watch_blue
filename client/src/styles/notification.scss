@@ -15,26 +15,42 @@
   color: white;
   position: absolute;
   width: 160px;
-  top: 20px;
+  top: 10px;
   left: 30px;
   font-size: 19px;
   z-index: 100;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.notification-symbol{
+  padding: 5px;
+}
+
+.notification-direction{
+  background-color: black;
+  text-align: center;
+  padding: 5px;
+  color: white;
 }
 
 .floodNotification {
   @include weatherNotification();
-  background-color: #6699CC;
+  background-color: #006573;
 }
 
 .fireNotification {
   @include weatherNotification();
-  background-color: #D49090;
+  background-color: #730303;
 }
 
-.heatNotification {
+.stormNotification {
   @include weatherNotification();
-  background-color: #FFFB00;
+  background-color: #0a3140;
+}
+
+.cycloneNotification {
+  @include weatherNotification();
+  background-color: #44444D;
 }
 
 .notification-message-display {

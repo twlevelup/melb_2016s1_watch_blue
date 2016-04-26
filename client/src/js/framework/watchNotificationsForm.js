@@ -42,7 +42,6 @@ var NotificationsForm = Backbone.View.extend({
   _setDefaultMessage: function() {
     var index = this.$(this.notificationTypeEl).val(),
       selectedNotification = this.config[index];
-
     var message = (selectedNotification && selectedNotification.defaultValue) ? selectedNotification.defaultValue : '';
 
     this.$(this.notificationMessageEl).val(message);

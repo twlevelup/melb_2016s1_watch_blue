@@ -6,17 +6,21 @@ var ViewWithButtons = require('../framework/viewWithButtons'),
 var WeatherNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
-/*    this.message = {
-        "time": "09:20PM",
-        "date": "22032016",
-        "type": "Fire",
-        "severity": "High",
-        "location": "",
-        "longtitude":"",
-        "latitude":"",
-        "description": "Please evacuate immediately"
-    };*/
-   this.message = opts;
+    if (opts.severity) {
+      this.message = opts;
+    }
+    else {
+        this.message = {
+          "time": "09:20PM",
+          "date": "22032016",
+          "type": "Fire",
+          "severity": "High",
+          "location": "",
+          "longtitude":"",
+          "latitude":"",
+          "description": "Please evacuate immediately"
+      };
+    }
   },
 
   className: 'weatherNotification',
@@ -32,13 +36,19 @@ var WeatherNotification = ViewWithButtons.extend({
   },
 
   render: function() {
-    console.log(this.message.type);
     switch (this.message.type) {
-      case "Hurricane":
-        this.$el[0].className = 'hurricaneNotification';
+      case "Flood":
+        this.$el[0].className = 'floodNotification';
         break;
       case "Fire":
         this.$el[0].className = 'fireNotification';
+        break;
+      case "Storm":
+        this.$el[0].className = 'stormNotification';
+        break;
+      case "Cyclone":
+        this.$el[0].className = 'cycloneNotification';
+        break;
       default:
         break;
     }
