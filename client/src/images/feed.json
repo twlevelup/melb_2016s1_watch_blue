@@ -3,7 +3,7 @@
         {
             "time": "12:00PM",
             "date": "22032016",
-            "type": "Hurricane",
+            "type": "Cyclone",
             "severity": "High",
             "location": "Townsville",
             "longtitude":"19.2564S",
@@ -13,7 +13,7 @@
         {
             "time": "10:50PM",
             "date": "22032016",
-            "type": "Hurricane",
+            "type": "Cyclone",
             "severity": "Medium",
             "location": "Townsville",
             "longtitude":"19.2564S",
@@ -43,7 +43,7 @@
         {
             "time": "12:00PM",
             "date": "22032016",
-            "type": "Hurricane",
+            "type": "Storm",
             "severity": "High",
             "location": "Townsville",
             "longtitude":"19.2564S",

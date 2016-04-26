@@ -35,17 +35,22 @@
 
 .floodNotification {
   @include weatherNotification();
-  background-color: #6699CC;
+  background-color: #006573;
 }
 
 .fireNotification {
   @include weatherNotification();
-  background-color: #D49090;
+  background-color: #730303;
 }
 
-.heatNotification {
+.stormNotification {
   @include weatherNotification();
-  background-color: #FFFB00;
+  background-color: #0a3140;
+}
+
+.cycloneNotification {
+  @include weatherNotification();
+  background-color: #44444D;
 }
 
 .notification-message-display {

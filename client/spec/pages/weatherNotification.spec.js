@@ -34,7 +34,7 @@ describe('The Alert Notification', function() {
       var testingNotification = new weatherNotification({
           "time": "12:00PM",
           "date": "22032016",
-          "type": "Hurricane",
+          "type": "Cyclone",
           "severity": "High",
           "location": "Townsville",
           "longtitude":"19.2564S",
@@ -43,7 +43,25 @@ describe('The Alert Notification', function() {
       });
 
       testingNotification.render();
-      expect(testingNotification.$el[0].className).toContain('hurricaneNotification');
+      expect(testingNotification.$el[0].className).toContain('cycloneNotification');
+    });
+
+    it('should have grey ish for storm', function() {
+      var testingNotification = new weatherNotification(
+        {
+            "time": "12:00PM",
+            "date": "22032016",
+            "type": "Storm",
+            "severity": "High",
+            "location": "Townsville",
+            "longtitude":"19.2564S",
+            "latitude":"146.8183",
+            "description": "Please evacuate immediately"
+        }
+      );
+
+      testingNotification.render();
+      expect(testingNotification.$el[0].className).toContain('stormNotification');
     });
 
     it('should have red for a fire', function() {
