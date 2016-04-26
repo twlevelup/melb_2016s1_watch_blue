@@ -1,6 +1,7 @@
 {
     "weather":[
         {
+            "unixtime": 1461662670,
             "time": "12:00PM",
             "date": "22032016",
             "type": "Hurricane",
@@ -11,6 +12,7 @@
             "description": "Please evacuate immediately"
         },
         {
+            "unixtime": 1461661670,
             "time": "10:50PM",
             "date": "22032016",
             "type": "Hurricane",
@@ -21,6 +23,7 @@
             "description": "Please be prepared to evacuate"
         },
         {
+            "unixtime": 1861162670,
             "time": "09:20PM",
             "date": "22032016",
             "type": "Fire",
@@ -31,6 +34,7 @@
             "description": "Please evacuate immediately"
         },
         {
+            "unixtime": 1461662670,
             "time": "09:00PM",
             "date": "22032016",
             "type": "Fire",
@@ -41,6 +45,7 @@
             "description": "Fire affecting 10km radius, be prepared to evacuate immediately"
         },
         {
+            "unixtime": 146166670,
             "time": "12:00PM",
             "date": "22032016",
             "type": "Hurricane",

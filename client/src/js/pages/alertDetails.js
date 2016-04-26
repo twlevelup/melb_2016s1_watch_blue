@@ -31,10 +31,23 @@ var AlertsView = PageView.extend({
     thisHandle.render();
   },
 
+  cmpAlertData: function(first, second) {
+    console.log(first + " " + second);
+    if(first.unixtime == second.unixtime)
+        return 0;
+    if(first.unixtime < second.unixtime)
+        return 1;
+    if(first.unixtime > second.unixtime)
+        return -1;
+  },
+
   initialize: function() {
     var thisHandle = this;
     $.getJSON( "/images/feed.json", {}, function(data) {
-      thisHandle.updateData(data["weather"][0], thisHandle)
+      // Order by time
+      var first = data.weather.sort(thisHandle.cmpAlertData)[0];
+
+      thisHandle.updateData(first, thisHandle);
 
     } );
 

@@ -40,6 +40,28 @@ describe('The Alert Details Page', function() {
       });
   });
 
+  describe('alert sort comparitor', function () {
+      it ('return -1/0/1 depending on order of two unix times', function () {
+          var testData = [
+          {
+              "unixtime": 1461662670
+          },
+          {
+              "unixtime": 1461667670
+          },
+          {
+              "unixtime": 1461661670
+          },
+          {
+              "unixtime": 1461661670
+          }
+          ]
+          expect(alertPage.cmpAlertData(testData[0], testData[1])).toEqual(1);
+          expect(alertPage.cmpAlertData(testData[1], testData[2])).toEqual(-1);
+          expect(alertPage.cmpAlertData(testData[2], testData[3])).toEqual(0);
+      });
+  });
+
   describe('navigation', function () {
       describe('goToHomePage function', function () {
           it ('should go to the home page successfully', function() {
