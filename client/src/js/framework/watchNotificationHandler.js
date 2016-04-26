@@ -19,8 +19,20 @@ NotificationHandler.prototype.loadNotifications = function(notifications) {
 
 NotificationHandler.prototype.showNotification = function(opts) {
   var Notification = this.notifications[opts.type];
-  this.activeNotification = new Notification(opts);
-  this.activeNotification.render();
+  $.getJSON( "/images/feed.json", {}, function(data) {
+    // Order by time
+    var first = data.weather.sort(function(first, second) {
+        if(first.unixtime == second.unixtime)
+            return 0;
+        if(first.unixtime < second.unixtime)
+            return 1;
+        if(first.unixtime > second.unixtime)
+            return -1;
+    })[0];
+
+    this.activeNotification = new Notification(first);
+    this.activeNotification.render();
+  } );
 };
 
 NotificationHandler.prototype.hideNotification = function() {
