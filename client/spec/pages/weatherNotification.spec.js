@@ -32,14 +32,14 @@ describe('The Alert Notification', function() {
 
     it('should have blue for floods', function() {
       var testingNotification = new weatherNotification({
-          "time": "12:00PM",
-          "date": "22032016",
-          "type": "Cyclone",
-          "severity": "High",
-          "location": "Townsville",
-          "longtitude":"19.2564S",
-          "latitude":"146.8183E",
-          "description": "Please evacuate immediately"
+        time: '12:00PM',
+        date: '22032016',
+        type: 'Cyclone',
+        severity: 'High',
+        location: 'Townsville',
+        longtitude:'19.2564S',
+        latitude:'146.8183E',
+        description: 'Please evacuate immediately'
       });
 
       testingNotification.render();
@@ -49,14 +49,14 @@ describe('The Alert Notification', function() {
     it('should have grey ish for storm', function() {
       var testingNotification = new weatherNotification(
         {
-            "time": "12:00PM",
-            "date": "22032016",
-            "type": "Storm",
-            "severity": "High",
-            "location": "Townsville",
-            "longtitude":"19.2564S",
-            "latitude":"146.8183",
-            "description": "Please evacuate immediately"
+          time: '12:00PM',
+          date: '22032016',
+          type: 'Storm',
+          severity: 'High',
+          location: 'Townsville',
+          longtitude:'19.2564S',
+          latitude:'146.8183',
+          description: 'Please evacuate immediately'
         }
       );
 
@@ -66,14 +66,14 @@ describe('The Alert Notification', function() {
 
     it('should have red for a fire', function() {
       var testingNotification = new weatherNotification({
-          "time": "12:00PM",
-          "date": "22032016",
-          "type": "Fire",
-          "severity": "High",
-          "location": "Townsville",
-          "longtitude":"19.2564S",
-          "latitude":"146.8183E",
-          "description": "Please evacuate immediately"
+        time: '12:00PM',
+        date: '22032016',
+        type: 'Fire',
+        severity: 'High',
+        location: 'Townsville',
+        longtitude:'19.2564S',
+        latitude:'146.8183E',
+        description: 'Please evacuate immediately'
       });
 
       testingNotification.render();
@@ -82,14 +82,14 @@ describe('The Alert Notification', function() {
 
     it('should display the description', function() {
       var testingNotification = new weatherNotification({
-          "time": "12:00PM",
-          "date": "22032016",
-          "type": "Fire",
-          "severity": "High",
-          "location": "Townsville",
-          "longtitude":"19.2564S",
-          "latitude":"146.8183E",
-          "description": "Please evacuate immediately"
+        time: '12:00PM',
+        date: '22032016',
+        type: 'Fire',
+        severity: 'High',
+        location: 'Townsville',
+        longtitude:'19.2564S',
+        latitude:'146.8183E',
+        description: 'Please evacuate immediately'
       });
 
       testingNotification.render();

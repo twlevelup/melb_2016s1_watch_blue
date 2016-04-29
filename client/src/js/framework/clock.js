@@ -19,9 +19,9 @@ clock.displayDateTime = function(date) {
       m = date.getMinutes(),
       s = date.getSeconds();
 
-  var amPm = h > 12 ? "PM" : "AM";
+  var amPm = h > 12 ? 'PM' : 'AM';
 
-  if (amPm == "PM") h = h - 12;
+  if (amPm == 'PM') h = h - 12;
 
   if (h < 10) {
     h = '0' + h;

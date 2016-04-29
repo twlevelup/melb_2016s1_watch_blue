@@ -10,15 +10,15 @@ var WeatherNotification = ViewWithButtons.extend({
       this.message = opts;
     }
     else {
-        this.message = {
-          "time": "09:20PM",
-          "date": "22032016",
-          "type": "Fire",
-          "severity": "High",
-          "location": "",
-          "longtitude":"",
-          "latitude":"",
-          "description": "Please evacuate immediately"
+      this.message = {
+        time: '09:20PM',
+        date: '22032016',
+        type: 'Fire',
+        severity: 'High',
+        location: '',
+        longtitude:'',
+        latitude:'',
+        description: 'Please evacuate immediately'
       };
     }
   },
@@ -37,16 +37,16 @@ var WeatherNotification = ViewWithButtons.extend({
 
   render: function() {
     switch (this.message.type) {
-      case "Flood":
+      case 'Flood':
         this.$el[0].className = 'floodNotification';
         break;
-      case "Fire":
+      case 'Fire':
         this.$el[0].className = 'fireNotification';
         break;
-      case "Storm":
+      case 'Storm':
         this.$el[0].className = 'stormNotification';
         break;
-      case "Cyclone":
+      case 'Cyclone':
         this.$el[0].className = 'cycloneNotification';
         break;
       default:
@@ -67,7 +67,7 @@ var WeatherNotification = ViewWithButtons.extend({
   },
 
   showDetails: function() {
-      window.App.navigate('alertDetails');
+    window.App.navigate('alertDetails');
   }
 
 });
