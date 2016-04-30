@@ -41,20 +41,18 @@ var AlertsView = PageView.extend({
     thisHandle.render();
   },
 
-  cmpAlertData: function(first, second) {
-    if (first.unixtime == second.unixtime)
-        return 0;
-    if (first.unixtime < second.unixtime)
-        return 1;
-    if (first.unixtime > second.unixtime)
-        return -1;
-  },
-
   initialize: function() {
     var thisHandle = this;
     $.getJSON('/images/feed.json', {}, function(data) {
       // Order by time
-      var first = data.weather.sort(thisHandle.cmpAlertData)[0];
+      var first = data.weather.sort(function(first, second) {
+        if(first.unixtime == second.unixtime)
+            return 0;
+        if(first.unixtime < second.unixtime)
+            return 1;
+        if(first.unixtime > second.unixtime)
+            return -1;
+      })[0];
 
       thisHandle.updateData(first, thisHandle);
 
