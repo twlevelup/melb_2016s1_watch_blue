@@ -30,7 +30,7 @@ describe('The Alert Notification', function() {
 
   describe('Time Difference',function(){
     it('should be right time difference',function(){
-      expect(weatherNotification.prototype.updateTime(90,40)).toEqual(50);
+      expect(weatherNotification.prototype.updateTime(40,90)).toEqual(50);
     })
   });
 
