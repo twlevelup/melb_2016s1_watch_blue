@@ -10,7 +10,7 @@
             "longtitude":"19.2564S",
             "latitude":"146.8183E",
             "action": "Please evacuate immediately",
-            "description": "Lorem ipsum dolor sit amet, quot mazim vidisse vel ex. Wisi eius dicant te eum, no sit contentiones delicatissimi, iracundia gubergren sed at."
+            "description": "Coastal residents in Townsville specifically warned of the dangerous storm tide as the cyclone crosses the coast. The sea is likely to rise steadily up to a level which will be significantly above the normal tide, with damaging waves, strong currents and flooding of low-lying areas extending some way inland. People living in areas likely to be affected by this flooding should take measures to protect their property as much as possible and be prepared to follow instructions regarding evacuation of the area if advised to do so by the authorities."
         },
         {
             "unixtime": 3061661670,
@@ -22,7 +22,7 @@
             "longtitude":"19.2564S",
             "latitude":"146.8183E",
             "action": "Please be prepared to evacuate",
-            "description": "Lorem ipsum dolor sit amet, quot mazim vidisse vel ex. Wisi eius dicant te eum, no sit contentiones delicatissimi, iracundia gubergren sed at."
+            "description": "Heavy rain and possible flash flooding is expected in areas between Townsville and Cairns as the cyclone hits the coast. Affected areas including Cairns, Ingham, Innisfail, Mareeba, Cardwell and Atherton could be pelted with more than 300 millimetres of rain within 24 hours. The state’s north has been pummelled by severe thunderstorms, heavy rainfall, flash flooding, pounding surf and strong to gale-force winds, with gusts of up to 90km/h."
         },
         {
             "unixtime": 1861162670,
@@ -34,7 +34,7 @@
             "longtitude":"",
             "latitude":"",
             "action": "Please evacuate immediately",
-            "description": "Lorem ipsum dolor sit amet, quot mazim vidisse vel ex. Wisi eius dicant te eum, no sit contentiones delicatissimi, iracundia gubergren sed at."
+            "description": "The Department of Fire and Emergency Services (DFES) advises these are the worst conditions for a bush or grass fire. If a fire starts and takes hold it will be extremely difficult to control and will take significant firefighting resources and cooler conditions to bring under control."
         },
         {
             "unixtime": 1461662670,
@@ -46,7 +46,7 @@
             "longtitude":"",
             "latitude":"",
             "action": "Fire affecting 10km radius, be prepared to evacuate immediately",
-            "description": "Lorem ipsum dolor sit amet, quot mazim vidisse vel ex. Wisi eius dicant te eum, no sit contentiones delicatissimi, iracundia gubergren sed at."
+            "description": "Fresh and gusty sea breezes in coastal parts near the west coast. Hot and windy conditions through the eastern parts of the state east of a surface trough. The Department of Fire and Emergency Services (DFES) advises if a fire starts and takes hold it will be unpredictable, move very fast and be difficult for firefighters to bring under control."
         },
         {
             "unixtime": 146166670,
@@ -58,7 +58,7 @@
             "longtitude":"19.2564S",
             "latitude":"146.8183",
             "action": "Please evacuate immediately",
-            "description": "Lorem ipsum dolor sit amet, quot mazim vidisse vel ex. Wisi eius dicant te eum, no sit contentiones delicatissimi, iracundia gubergren sed at."
+            "description": "Severe thunderstorms are likely to produce large hailstones and damaging winds in the warning area over the next several hours. The State Emergency Service advises that people should: Keep clear of fallen power lines, keep clear of creeks and storm drains, don't walk, ride your bike or drive through flood water, unnplug computers and appliances, stay indoors away from windows, and keep children and pets indoors as well. "
         }
     ]
 
