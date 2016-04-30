@@ -23,7 +23,17 @@ var AlertsView = PageView.extend({
   buttonEvents: {
     right: 'goToHomePage',
     face: 'goToHomePage',
-    left: 'goToHomePage'
+    left: 'goToHomePage',
+    top: 'scrollUp',
+    bottom: 'scrollDown',
+  },
+
+  scrollUp: function() {
+    $('#watch-face').animate({scrollTop: '-=70px'});
+  },
+
+  scrollDown: function() {
+    $('#watch-face').animate({scrollTop: '+=70px'});
   },
 
   updateData: function(data, thisHandle) {
