@@ -35,15 +35,15 @@ clock.displayDateTime = function(date) {
     s = '0' + s;
   }
 
-  var sDate = [clock.days[day].substring(0, 3), clock.months[month].substring(0, 3), d, year].join(' '),
+  var sDate = [clock.days[day].substring(0, 3) + ',', clock.months[month].substring(0, 3), d].join(' '),
     sTime =  [h, m].join(':'),
-    sTime = sTime + amPm,
     sDateTime = sDate + ' ' + sTime;
 
   // TODO scope to current view
   $('.clock-date-time').html(sDateTime);
   $('.clock-date').html(sDate);
   $('.clock-time').html(sTime);
+  $('.clock-ampm').html(amPm);
 
 };
 

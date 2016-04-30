@@ -13,7 +13,7 @@ var WeatherNotification = ViewWithButtons.extend({
       this.message = {
         time: '09:20PM',
         date: '22032016',
-        type: 'Fire',
+        type: 'Cyclone',
         severity: 'High',
         location: '',
         longtitude:'',
