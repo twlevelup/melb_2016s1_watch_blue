@@ -7,7 +7,6 @@ var WatchNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
     this.message = opts && opts.message;
-    this.timeStarted = new Date().getTime();
 
   },
 
@@ -30,23 +29,19 @@ var WatchNotification = ViewWithButtons.extend({
     // TODO make this configurable
     $('#watch-face').append(this.$el);
 
-  
-
     this.setButtonEvents();
     return this;
   },
-  updateTime: function(){
-      var difference = new Date().getTime() - this.timeStarted;
-      console.log(difference);
-  }
-  ,
+
+  updateTime: function() {
+    var difference = new Date().getTime() - this.timeStarted;
+    console.log(difference);
+  },
+
   hide: function() {
     eventHub.trigger('hideNotification');
   }
 
 });
-
-
-
 
 module.exports = WatchNotification;

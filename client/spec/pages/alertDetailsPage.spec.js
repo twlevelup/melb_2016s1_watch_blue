@@ -23,53 +23,53 @@ describe('The Alert Details Page', function() {
     });
   });
 
-  describe('data handling', function () {
-      it ('should update the data correctly', function() {
-          var alertDefinition = {
-                    "time": "abcd",
-                    "date": "",
-                    "type": "",
-                    "severity": "",
-                    "location": "",
-                    "longtitude":"",
-                    "latitude":"",
-                    "description": ""
-                };
-          alertPage.updateData(alertDefinition, alertPage);
-          expect(alertPage.alertDefinition).toEqual(alertDefinition);
-      });
+  describe('data handling', function() {
+    it ('should update the data correctly', function() {
+      var alertDefinition = {
+        time: 'abcd',
+        date: '',
+        type: '',
+        severity: '',
+        location: '',
+        longtitude:'',
+        latitude:'',
+        description: ''
+      };
+      alertPage.updateData(alertDefinition, alertPage);
+      expect(alertPage.alertDefinition).toEqual(alertDefinition);
+    });
   });
 
-  describe('alert sort comparitor', function () {
-      it ('return -1/0/1 depending on order of two unix times', function () {
-          var testData = [
+  describe('alert sort comparitor', function() {
+    it ('return -1/0/1 depending on order of two unix times', function() {
+      var testData = [
           {
-              "unixtime": 1461662670
+            unixtime: 1461662670
           },
           {
-              "unixtime": 1461667670
+            unixtime: 1461667670
           },
           {
-              "unixtime": 1461661670
+            unixtime: 1461661670
           },
           {
-              "unixtime": 1461661670
+            unixtime: 1461661670
           }
           ]
-          expect(alertPage.cmpAlertData(testData[0], testData[1])).toEqual(1);
-          expect(alertPage.cmpAlertData(testData[1], testData[2])).toEqual(-1);
-          expect(alertPage.cmpAlertData(testData[2], testData[3])).toEqual(0);
-      });
+      expect(alertPage.cmpAlertData(testData[0], testData[1])).toEqual(1);
+      expect(alertPage.cmpAlertData(testData[1], testData[2])).toEqual(-1);
+      expect(alertPage.cmpAlertData(testData[2], testData[3])).toEqual(0);
+    });
   });
 
-  describe('navigation', function () {
-      describe('goToHomePage function', function () {
-          it ('should go to the home page successfully', function() {
-              spyOn(window.App, 'navigate');
-              alertPage.goToHomePage();
-              expect(window.App.navigate).toHaveBeenCalledWith('');
-          });
+  describe('navigation', function() {
+    describe('goToHomePage function', function() {
+      it ('should go to the home page successfully', function() {
+        spyOn(window.App, 'navigate');
+        alertPage.goToHomePage();
+        expect(window.App.navigate).toHaveBeenCalledWith('');
       });
+    });
   });
 
   describe('button events', function() {

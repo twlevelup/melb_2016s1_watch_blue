@@ -10,17 +10,23 @@ var WeatherNotification = ViewWithButtons.extend({
       this.message = opts;
     }
     else {
-        this.message = {
-          "time": "09:20PM",
-          "date": "22032016",
-          "type": "Fire",
-          "severity": "High",
-          "location": "",
-          "longtitude":"",
-          "latitude":"",
-          "description": "Please evacuate immediately"
+      this.message = {
+        time: '09:20PM',
+        date: '22032016',
+        type: 'Cyclone',
+        severity: 'High',
+        location: '',
+        longtitude:'',
+        latitude:'',
+        description: 'Please evacuate immediately'
       };
     }
+
+   
+   var currentTime = new Date().getTime();
+   var difference = this.updateTime(currentTime,this.message['unixtime']);
+
+  this.message['time'] = this.prettyTime(difference); 
   },
 
   className: 'weatherNotification',
@@ -37,16 +43,16 @@ var WeatherNotification = ViewWithButtons.extend({
 
   render: function() {
     switch (this.message.type) {
-      case "Flood":
+      case 'Flood':
         this.$el[0].className = 'floodNotification';
         break;
-      case "Fire":
+      case 'Fire':
         this.$el[0].className = 'fireNotification';
         break;
-      case "Storm":
+      case 'Storm':
         this.$el[0].className = 'stormNotification';
         break;
-      case "Cyclone":
+      case 'Cyclone':
         this.$el[0].className = 'cycloneNotification';
         break;
       default:
@@ -61,13 +67,30 @@ var WeatherNotification = ViewWithButtons.extend({
     this.setButtonEvents();
     return this;
   },
+  updateTime: function(currentTime, notificationTime){
+      var difference = currentTime - notificationTime;
+      return difference;
+  },
+
+  prettyTime: function(timeSince){
+      if(timeSince > 3600){
+        return "> 1 hour";
+      }
+      var timeStr = "";
+      if(timeSince < 60){
+        return timeSince + " sec";
+      }
+      var minutes = Math.floor(timeSince / 60);
+      return minutes + " min";
+  }
+  ,
 
   hide: function() {
     eventHub.trigger('hideNotification');
   },
 
   showDetails: function() {
-      window.App.navigate('alertDetails');
+    window.App.navigate('alertDetails');
   }
 
 });
