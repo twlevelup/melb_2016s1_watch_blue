@@ -33,10 +33,6 @@ var WatchNotification = ViewWithButtons.extend({
     return this;
   },
 
-  updateTime: function() {
-    var difference = new Date().getTime() - this.timeStarted;
-    console.log(difference);
-  },
 
   hide: function() {
     eventHub.trigger('hideNotification');

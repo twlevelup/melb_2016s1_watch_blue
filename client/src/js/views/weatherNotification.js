@@ -7,6 +7,7 @@ var WeatherNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
     if (opts.severity) {
+      console.log("External Source " + opts);
       this.message = opts;
     }
     else {
@@ -68,11 +69,15 @@ var WeatherNotification = ViewWithButtons.extend({
     return this;
   },
   updateTime: function(currentTime, notificationTime){
+      console.log("Current Time " + currentTime);
+      console.log("Current Time " + notificationTime);
       var difference = currentTime - notificationTime;
+      console.log("Time difference"+difference);
       return difference;
   },
 
   prettyTime: function(timeSince){
+    console.log(timeSince);
       if(timeSince > 3600){
         return "> 1 hour";
       }
