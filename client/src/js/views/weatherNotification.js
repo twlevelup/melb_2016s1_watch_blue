@@ -69,24 +69,25 @@ var WeatherNotification = ViewWithButtons.extend({
     return this;
   },
   updateTime: function(currentTime, notificationTime){
-      console.log("Current Time " + currentTime);
-      console.log("Current Time " + notificationTime);
-      var difference = currentTime - notificationTime;
+      console.log("Current Time " + currentTime/1000);
+      console.log("Notification Time " + notificationTime);
+      var difference = Math.floor(currentTime/1000) - notificationTime;
       console.log("Time difference"+difference);
       return difference;
   },
 
   prettyTime: function(timeSince){
-    console.log(timeSince);
-      if(timeSince > 3600){
-        return "> 1 hour";
+      if(timeSince > (3600 * 24)){
+        return "over a day ago";
+      } else if(timeSince > 3600){
+        var hours = Math.floor(timeSince / 3600);
+        return hours + " hrs ago";
+      } else if( timeSince > 60 && timeSince < 3600){
+        var minutes =  Math.floor(timeSince / 60);
+        return minutes + " mins ago";
       }
-      var timeStr = "";
-      if(timeSince < 60){
-        return timeSince + " sec";
-      }
-      var minutes = Math.floor(timeSince / 60);
-      return minutes + " min";
+      return "invalid time";
+      
   }
   ,
 
