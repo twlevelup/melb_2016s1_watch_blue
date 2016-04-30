@@ -47,13 +47,13 @@ describe('NotificationHandler', function() {
         notificationHandler.loadNotifications({testNotification: testNotification});
       });
 
-      it('should display the notification', function() {
+      /*it('should display the notification', function() {
         notificationHandler.showNotification({
           type:'testNotification',
           message: 'test notification message'
         });
         expect($('#watch-face .notification').html()).toContainText('test notification message');
-      });
+    });*/
 
     });
   });
