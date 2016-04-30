@@ -42,7 +42,6 @@ var AlertsView = PageView.extend({
   },
 
   cmpAlertData: function(first, second) {
-    console.log(first + ' ' + second);
     if (first.unixtime == second.unixtime)
         return 0;
     if (first.unixtime < second.unixtime)
@@ -69,7 +68,6 @@ var AlertsView = PageView.extend({
   },
 
   render: function() {
-    console.log('initialize 2');
     this.$el.html(this.template(this.alertDefinition));
 
     var contactsHTML = document.createDocumentFragment();

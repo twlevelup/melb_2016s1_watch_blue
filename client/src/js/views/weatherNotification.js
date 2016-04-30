@@ -7,7 +7,6 @@ var WeatherNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
     if (opts.severity) {
-      console.log("External Source " + opts);
       this.message = opts;
     }
     else {
@@ -23,12 +22,12 @@ var WeatherNotification = ViewWithButtons.extend({
       };
     }
 
-   
+
    var currentTime = new Date().getTime();
    currentTime = Math.floor(currentTime / 1000);
    var difference = this.updateTime(currentTime,this.message['unixtime']);
 
-  this.message['time'] = this.prettyTime(difference); 
+  this.message['time'] = this.prettyTime(difference);
   },
 
   className: 'weatherNotification',
@@ -71,7 +70,6 @@ var WeatherNotification = ViewWithButtons.extend({
   },
   updateTime: function(currentTime, notificationTime){
       var difference = currentTime - notificationTime;
-      console.log("Time difference"+difference);
       return difference;
   },
 
@@ -86,8 +84,7 @@ var WeatherNotification = ViewWithButtons.extend({
         return minutes + " mins ago";
       }
       return "invalid time";
-  }
-  ,
+  },
 
   hide: function() {
     eventHub.trigger('hideNotification');
