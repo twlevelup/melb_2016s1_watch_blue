@@ -9,6 +9,7 @@
   opacity: 0.9;
   z-index: 100;
   padding: 10px;
+  border-radius: 8px;
 }
 
 @mixin weatherNotification() {
@@ -19,7 +20,8 @@
   left: 30px;
   font-size: 19px;
   z-index: 100;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 10px 20px;
+  border-radius: 8px;
 }
 
 .notification-symbol{
@@ -27,8 +29,10 @@
 }
 
 .notification-direction{
+  border-radius: 8px;
   background-color: black;
   text-align: center;
+  margin-top: 9px;
   padding: 5px;
   color: white;
 }
