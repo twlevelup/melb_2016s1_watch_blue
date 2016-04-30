@@ -21,6 +21,12 @@ var WeatherNotification = ViewWithButtons.extend({
         description: 'Please evacuate immediately'
       };
     }
+
+   
+   var currentTime = new Date().getTime();
+   var difference = this.updateTime(currentTime,this.message['unixtime']);
+
+  this.message['time'] = this.prettyTime(difference); 
   },
 
   className: 'weatherNotification',
@@ -61,6 +67,23 @@ var WeatherNotification = ViewWithButtons.extend({
     this.setButtonEvents();
     return this;
   },
+  updateTime: function(currentTime, notificationTime){
+      var difference = currentTime - notificationTime;
+      return difference;
+  },
+
+  prettyTime: function(timeSince){
+      if(timeSince > 3600){
+        return "> 1 hour";
+      }
+      var timeStr = "";
+      if(timeSince < 60){
+        return timeSince + " sec";
+      }
+      var minutes = Math.floor(timeSince / 60);
+      return minutes + " min";
+  }
+  ,
 
   hide: function() {
     eventHub.trigger('hideNotification');

@@ -7,7 +7,6 @@ var WatchNotification = ViewWithButtons.extend({
 
   initialize: function(opts) {
     this.message = opts && opts.message;
-    this.timeStarted = new Date().getTime();
 
   },
 
