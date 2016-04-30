@@ -25,6 +25,7 @@ var WeatherNotification = ViewWithButtons.extend({
 
    
    var currentTime = new Date().getTime();
+   currentTime = Math.floor(currentTime / 1000);
    var difference = this.updateTime(currentTime,this.message['unixtime']);
 
   this.message['time'] = this.prettyTime(difference); 
@@ -69,9 +70,7 @@ var WeatherNotification = ViewWithButtons.extend({
     return this;
   },
   updateTime: function(currentTime, notificationTime){
-      console.log("Current Time " + currentTime/1000);
-      console.log("Notification Time " + notificationTime);
-      var difference = Math.floor(currentTime/1000) - notificationTime;
+      var difference = currentTime - notificationTime;
       console.log("Time difference"+difference);
       return difference;
   },
@@ -87,7 +86,6 @@ var WeatherNotification = ViewWithButtons.extend({
         return minutes + " mins ago";
       }
       return "invalid time";
-      
   }
   ,
 

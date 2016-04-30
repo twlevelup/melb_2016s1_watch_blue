@@ -28,6 +28,12 @@ describe('The Alert Notification', function() {
     weatherNotification.prototype.hide();
   });
 
+  describe('Time Difference',function(){
+    it('should be right time difference',function(){
+      expect(weatherNotification.prototype.updateTime(90,40)).toEqual(50);
+    })
+  });
+
   describe('notification colour', function() {
 
     it('should have blue for floods', function() {
