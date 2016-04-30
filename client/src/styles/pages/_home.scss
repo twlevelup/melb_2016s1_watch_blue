@@ -1,5 +1,24 @@
 #home {
   h1 {
-  	font-size: 3.5em;
+  	font-size: 4em;
+    color: #DDDDDD;
+    margin: 0;
+  }
+  .clock-ampm {
+    padding-left: 3px;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    margin: 0;
+    color: #AAAAAA;
+    letter-spacing: 2px;
+  }
+
+  .clock-face-master {
+    padding-right: 28px;
+    text-align: center;
+    padding-top: 22%;
   }
 }
